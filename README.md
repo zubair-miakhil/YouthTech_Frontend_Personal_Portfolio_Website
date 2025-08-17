@@ -1,4 +1,4 @@
-<img width="1663" height="820" alt="Screenshot 2025-08-18 at 2 37 36 AM" src="https://github.com/user-attachments/assets/639b7922-975c-47ee-ae75-ad459c6d9e3c" />🌟 Personal Portfolio Website
+🌟 Personal Portfolio Website
 
 A fully responsive **Personal Portfolio Website** built using **HTML, CSS, and JavaScript**. This project showcases personal skills, projects, and experience with a clean, modern, and interactive design.
 

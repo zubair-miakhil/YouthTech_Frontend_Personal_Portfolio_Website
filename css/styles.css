@@ -1,0 +1,380 @@
+/* styles.css - Portfolio for Zubair Miakhil */
+
+/* Google Fonts */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container utility */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header & Navigation */
+header {
+  background: #222;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+}
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ff6f61;
+  background: #fff2;
+  transform: scale(1.08);
+}
+
+/* Hamburger menu (mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.hamburger {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+}
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s;
+}
+.hamburger::before {
+  top: -9px;
+}
+.hamburger::after {
+  top: 9px;
+}
+
+/* Section base styles */
+.section {
+  padding: 4rem 0 3rem 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 0;
+  color: #222;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.profile-img {
+  width: 140px;
+  height: 140px;
+  background: #ddd url('../assets/profile-placeholder.png') center/cover no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 4px solid #fff;
+}
+.about-content {
+  text-align: center;
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ff6f61, #ffb88c);
+  border-radius: 5px;
+  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+}
+.progress-bar.animated::after {
+  width: attr(data-progress '%');
+}
+.skills-icons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills-icons img {
+  width: 44px;
+  height: 44px;
+  filter: grayscale(0.2);
+  transition: filter 0.3s, transform 0.3s;
+}
+.skills-icons img:hover,
+.skills-icons img:focus {
+  filter: grayscale(0) drop-shadow(0 2px 8px #ffb88c);
+  transform: scale(1.12);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,111,97,0.13);
+}
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #eee;
+}
+.project-content {
+  padding: 1.2rem 1rem 1.5rem 1rem;
+}
+.project-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #ff6f61;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.project-link:hover,
+.project-link:focus {
+  color: #222;
+  text-decoration: underline;
+}
+
+/* Resume Section */
+.resume-section .btn {
+  display: inline-block;
+  background: #ff6f61;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.resume-section .btn:hover,
+.resume-section .btn:focus {
+  background: #ffb88c;
+  color: #222;
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contact-section .btn {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.contact-section .btn:hover,
+.contact-section .btn:focus {
+  background: #ffb88c;
+  color: #222;
+  transform: scale(1.05);
+}
+.contact-info {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #444;
+}
+.contact-info a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+.contact-info a:hover,
+.contact-info a:focus {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #222;
+    flex-direction: column;
+    width: 180px;
+    gap: 0;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+  }
+  .nav-links.open {
+    display: flex;
+    animation: slideDown 0.3s;
+  }
+  .nav-toggle {
+    display: block;
+    z-index: 1100;
+  }
+  .about-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-icons img {
+    width: 36px;
+    height: 36px;
+  }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Section fade/slide-in animation (triggered by JS) */
+.section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Accessibility: focus outlines */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px solid #ff6f61;
+  outline-offset: 2px;
+} 

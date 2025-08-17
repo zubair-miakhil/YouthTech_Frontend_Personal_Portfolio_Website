@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zubair Miakhil | Graphic Designer Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="logo">Zubair Miakhil</div>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Me Section -->
+    <section id="about" class="section about-section">
+      <div class="container about-container">
+        <div class="profile-img" aria-label="Profile image placeholder" tabindex="0"></div>
+        <div class="about-content">
+          <h1>About Me</h1>
+          <h2>Zubair Miakhil</h2>
+          <h3>Graphic Designer</h3>
+          <p>
+            I am a passionate Graphic Designer with experience in creating impactful posters, engaging advertisements, dynamic promotional videos, and professional book designs. I thrive on creativity and attention to detail, always aiming to elevate brand identity and market presence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div class="skill">
+            <span>Graphic Designing</span>
+            <div class="progress-bar" data-progress="95"></div>
+          </div>
+          <div class="skill">
+            <span>Web Designing</span>
+            <div class="progress-bar" data-progress="80"></div>
+          </div>
+          <div class="skill">
+            <span>Social Media Marketing</span>
+            <div class="progress-bar" data-progress="85"></div>
+          </div>
+          <div class="skill">
+            <span>Logo Designing</span>
+            <div class="progress-bar" data-progress="90"></div>
+          </div>
+          <div class="skill">
+            <span>Promotional Videos</span>
+            <div class="progress-bar" data-progress="88"></div>
+          </div>
+          <div class="skill">
+            <span>Problem Solving</span>
+            <div class="progress-bar" data-progress="80"></div>
+          </div>
+          <div class="skill">
+            <span>Critical Thinking</span>
+            <div class="progress-bar" data-progress="85"></div>
+          </div>
+        </div>
+        <div class="skills-icons">
+          <img src="assets/photoshop.png" alt="Photoshop" title="Photoshop">
+          <img src="assets/illustrator.png" alt="Adobe Illustrator" title="Adobe Illustrator">
+          <img src="assets/coreldraw.png" alt="CorelDraw" title="CorelDraw">
+          <img src="assets/canva.png" alt="Canva" title="Canva">
+          <img src="assets/capcut.png" alt="Capcut" title="Capcut">
+          <img src="assets/picsart.png" alt="PicsArt" title="PicsArt">
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="assets/project1.jpg" alt="Project 1" class="project-img">
+            <div class="project-content">
+              <h3>Rahman Vocational Academy</h3>
+              <p>Designed impactful posters, advertisements, and book covers for educational campaigns.</p>
+              <a href="#" class="project-link" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/project2.jpg" alt="Project 2" class="project-img">
+            <div class="project-content">
+              <h3>Capital Import Export LLC</h3>
+              <p>Created social media ads, product packaging, and promotional videos to boost brand identity.</p>
+              <a href="#" class="project-link" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="assets/project3.jpg" alt="Project 3" class="project-img">
+            <div class="project-content">
+              <h3>SmartSync Technology Invertor</h3>
+              <p>Developed engaging visuals and campaigns for social media marketing and design.</p>
+              <a href="#" class="project-link" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section resume-section">
+      <div class="container">
+        <h2>Resume</h2>
+        <p>You can view or download my résumé below:</p>
+        <a href="assets/Zubair_Miakhil_Resume.pdf" class="btn" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <!-- Optionally, embed PDF: -->
+        <!-- <iframe src="assets/Zubair_Miakhil_Resume.pdf" title="Zubair Miakhil Resume" width="100%" height="500"></iframe> -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="you@email.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required aria-required="true" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:zubairmiakhil6005@gmail.com">zubairmiakhil6005@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+93786990511">+93 78-699-0511</a></p>
+          <p><strong>Location:</strong> JLD-Ningarhar, Afghanistan</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Zubair Miakhil. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html> 
